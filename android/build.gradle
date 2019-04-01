@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4' // <--- use this version or newer
+        classpath 'com.google.gms:google-services:4.0.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'io.fabric.tools:gradle:1.26.1'
+        classpath 'com.google.firebase:firebase-plugins:1.1.5'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {url "https://maven.google.com"}
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url "http://tokbox.bintray.com/maven" }
+        maven {
+            url "https://artifactory.ops.babylontech.co.uk/artifactory/android-releases"
+            credentials {
+                username "android.sdk.prudential"
+                password "X1w39TNa!%lh"
+            }
+        }
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+subprojects {
+    buildscript {
+        repositories {
+            jcenter()
+            maven { url "https://dl.bintray.com/android/android-tools/"  }
+        }
+    }
+    afterEvaluate {project ->
+        if (project.hasProperty("android")) {
+            android {
+                compileSdkVersion 27
+                buildToolsVersion '27.0.3'
+            }
+        }
+    }
+}
+ext {
+    buildToolsVersion = "27.0.3"
+    minSdkVersion = 21
+    compileSdkVersion = 27
+    targetSdkVersion = 27
+    supportLibVersion = "27.1.1"
+    googlePlayServicesVersion = "15.0.1"
+    androidMapsUtilsVersion = "0.5+"
+}

@@ -1,0 +1,98 @@
+{
+    "common" : {
+        "unfocusedBodyPartTransparency" : 50,
+        "focusedBodyPartTransparency" : 100,
+        "selectionAnimationDuration" : 0.3,
+        "inertiaRotationConversionRate": 0.005,
+        "inertiaVelocityScale" : {
+            "numerator" : 1,
+            "denominator" : 375
+        },
+        "inertiaDecelerationFactor" : 0.95,
+        "rotationSpeed" : 1.0
+    },
+    "layers" : {
+        "organs" : {
+            "transparent" : {
+                "categoryBitMask" : "transparent",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 10,
+                "blendMode" : "multiply",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#999999",
+                "nonFocusedEmissionColor" : "#ffffff"
+            },
+            "textured" : {
+                "categoryBitMask" : "textured",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 95,
+                "blendMode" : "alpha",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#000000"
+            },
+            "nonInteractable" : {
+                "categoryBitMask" : "transparent",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 10,
+                "blendMode" : "multiply",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#777777"
+            },
+            "minimumTransparency" : 70
+        },
+        "muscular" : {
+            "transparent" : {
+                "categoryBitMask" : "transparent",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 10,
+                "blendMode" : "alpha",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#000000"
+            },
+            "textured" : {
+                "categoryBitMask" : "textured",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 90,
+                "blendMode" : "alpha",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#000000"
+            }
+        },
+        "skeletal" : {
+            "transparent" : {
+                "categoryBitMask" : "transparent",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 1,
+                "blendMode" : "multiply",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#999999"
+            },
+            "textured" : {
+                "categoryBitMask" : "textured",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 90,
+                "blendMode" : "alpha",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#000000"
+            }
+        },
+        "skin" : {
+            "transparent" : {
+                "categoryBitMask" : "transparent",
+                "locksAmbientWithDiffuse" : false,
+                "transparencyMode" : "singleLayer",
+                "transparency" : 10,
+                "blendMode" : "multiply",
+                "diffuseColor" : "#ffffff",
+                "emissionColor" : "#999999"
+            }
+        }
+    }
+}

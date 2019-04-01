@@ -1,0 +1,11 @@
+framework module BabylonHealthcheckSDK {
+  umbrella header "BabylonHealthcheckSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BabylonHealthcheckSDK.Swift {
+    header "BabylonHealthcheckSDK-Swift.h"
+    requires objc
+}

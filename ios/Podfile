@@ -1,0 +1,148 @@
+source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://artifactory.intranet.asia/artifactory/api/pods/cocoapods/'
+platform :ios, '11.0'
+
+target 'HealthCareApp' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+#   pod 'React', :path => '../node_modules/react-native', :subspecs => [
+#     'Core',
+#     'CxxBridge',
+#     'DevSupport',
+#     # the following ones are the ones taken from "Libraries" in Xcode:
+#     'RCTAnimation',
+#     'RCTActionSheet',
+#     'RCTBlob',
+#     'RCTGeolocation',
+#     'RCTImage',
+#     'RCTLinkingIOS',
+#     'RCTNetwork',
+#     'RCTSettings',
+#     'RCTText',
+#     'RCTVibration',
+#     'RCTWebSocket'
+#   ]
+  
+#   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+#   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+#   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+#   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/GLog.podspec'
+  # Pods for HealthCareApp
+  # pod 'BabylonSDK', '~> 0.1.10'
+  pod 'Crashlytics', '~> 3.11.1'
+  pod 'Fabric', '~> 1.8.2'
+  pod 'Firebase', '~> 5.3.0'
+  pod 'Firebase/Messaging'
+  # pod 'Firebase/Core'
+  pod 'Firebase/Performance'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'GoogleSignIn', '~> 4.3'
+  pod 'KeychainAccess'
+  pod 'ReactiveCocoa', '~> 8.0'
+  pod 'ReactiveFeedback'
+  pod 'ReactiveSwift', '~> 4.0'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+#   pod 'RNI18n', :path => '../node_modules/react-native-i18n'
+
+  # pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
+  # pod 'react-native-overlay', :path => '../node_modules/react-native-overlay'
+
+  # pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
+  pod 'OpenTok', '2.15.3'
+#   pod 'RNFirebase'
+  # pod 'react-native-date-picker', :path => '../node_modules/react-native-date-picker'
+
+  # pod 'react-native-fcm', :path => '../node_modules/react-native-fcm'
+
+end
+
+
+# plugin 'cocoapods-art', :sources => [
+#  'babylon-ios-sdk-cocoapods'
+# ]
+
+
+
+# When using RN in combination with Cocoapods, a lot of
+# things are broken. These are the fixes we had to append
+# to our Podfile when upgrading to ReactNative@0.55.4.
+#
+# WARNING: Check those line numbers when you're on a different version!
+
+def change_lines_in_file(file_path, &change)
+  print "Fixing #{file_path}...\n"
+
+  contents = []
+
+  file = File.open(file_path, 'r')
+  file.each_line do | line |
+      contents << line
+  end
+  file.close
+
+  File.open(file_path, 'w') do |f|
+      f.puts(change.call(contents))
+  end
+end
+
+
+post_install do |installer|
+  # installer.pods_project.targets.each do |target|
+  #   if target.name == "React"
+  #       target.remove_from_project
+  #   end
+  # end
+    # installer.pods_project.targets.each do |target|
+    #     if target.name == 'React'
+    #         target.build_configurations.each do |config|
+    #             if config.name == 'Debug'
+    #                 config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['RCT_DEBUG=1','RCT_DEV=1','RCT_NSASSERT=1']
+    #             end
+    #         end
+    #     end
+    # end
+
+
+  # https://github.com/facebook/yoga/issues/711#issuecomment-381098373
+#   change_lines_in_file('./Pods/Target Support Files/yoga/yoga-umbrella.h') do |lines|
+#       lines.reject do | line |
+#           [
+#           '#import "Utils.h"',
+#           '#import "YGLayout.h"',
+#           '#import "YGNode.h"',
+#           '#import "YGNodePrint.h"',
+#           '#import "YGStyle.h"',
+#           '#import "Yoga-internal.h"',
+#           ].include?(line.strip)
+#       end
+#   end
+
+  # # https://github.com/facebook/yoga/issues/711#issuecomment-374605785
+  # change_lines_in_file('../node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceSizeMeasureMode.h') do |lines|
+  #     unless lines[27].include?("#ifdef __cplusplus")
+  #         lines.insert(27, "#ifdef __cplusplus")
+  #         lines.insert(34, "#endif")
+  #     end
+  #     lines
+  # end
+
+  # # https://github.com/facebook/react-native/issues/13198
+#   change_lines_in_file('../node_modules/react-native/Libraries/NativeAnimation/RCTNativeAnimatedNodesManager.h') do |lines|
+#       lines.map { |line| line.include?("#import <RCTAnimation/RCTValueAnimatedNode.h>") ? '#import "RCTValueAnimatedNode.h"' : line }
+#   end
+
+#   # # https://github.com/facebook/react-native/issues/16039
+#   change_lines_in_file('../node_modules/react-native/Libraries/WebSocket/RCTReconnectingWebSocket.m') do |lines|
+#       lines.map { |line| line.include?("#import <fishhook/fishhook.h>") ? '#import "fishhook.h"' : line }
+#   end
+
+  # change_lines_in_file('../node_modules/react-native/React/Modules/RCTEventEmitter.h') do |lines|
+  #   lines.map { |line| line.include?("#import <React/RCTBridge.h>") ? '#import "RCTBridge.h"' : line }
+  # end
+end
+
+

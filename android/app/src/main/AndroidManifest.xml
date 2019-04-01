@@ -1,0 +1,89 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prudential.prutopia">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.microphone" android:required="true" />
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+        <!--add FacebookActivity-->
+        <activity tools:replace="android:theme"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!--add CustomTabActivity-->
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--reference your fb_app_id-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <meta-data android:name="firebase_performance_logcat_enabled" android:value="true" />
+        <!-- <meta-data
+            android:name="firebase_performance_collection_enabled"
+            android:value="false" /> -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDUQEFFl1dKalCbFzVVZ5ZL_muib1GePVQ"/>
+        
+        <!--firebase related -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseBackgroundMessagingService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,4 @@
+framework module BabylonChatSDK {
+  header "BabylonChatSDK-Swift.h"
+  requires objc
+}

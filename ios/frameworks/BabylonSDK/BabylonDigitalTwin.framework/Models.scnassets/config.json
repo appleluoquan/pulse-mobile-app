@@ -1,0 +1,153 @@
+{
+    "male": {
+        "organs": [
+            {
+                "models": ["Male/Organ/Amygdala.dae", "Male/Organ/Cerebellum.dae", "Male/Organ/Cerebrum.dae", "Male/Organ/Medulla.dae"],
+                "merge": {"strategy": "all", "newName": "Organ_Brain"},
+                "nameExpression": "^(Organ)_(.+)$"
+            },
+            {"models": ["Male/Organ/Esophagus.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Gallbladder.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Kidneys.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {
+                "models": ["Male/Organ/LargeIntestine.dae", "Male/Organ/SmallIntestineDuodenum.dae"],
+                "merge": {"strategy": "all", "newName": "Organ_Bowels"},
+                "nameExpression": "^(Organ)_(.+)$"
+            },
+            {"models": ["Male/Organ/Larynx.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Liver.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Mouth.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Pancreas.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Stomach.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Thyroid.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Male/Organ/Trachea.dae"], "nameExpression": "^(Organ)_(.+)$"}
+        ],
+        "skeletal": [
+            {
+                "models": ["Male/Skeletal.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Skeletal)_(.+)$"
+            }
+        ],
+        "muscular": [
+            {
+                "models": ["Male/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular)_(?!(Medium|Superficial|Deep)_)(.+)$"
+            }
+        ],
+        "muscular.deep": [
+            {
+                "models": ["Male/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular_Deep)_(?!Medium|Superficial)(.+)$"
+            }
+        ],
+        "muscular.medium": [
+            {
+                "models": ["Male/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular_Medium)_(?!Deep|Superficial)(.+)$"
+            }
+        ],
+        "muscular.superficial": [
+            {
+                "models": ["Male/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular_Superficial)_(?!Deep|Medium)(.+)$"
+            }
+        ],
+        "skin": [{"models": ["Male/Skin.dae"], "nameExpression": "^(Skin)$"}],
+        "nodeTransforms": {
+            "Organ_Heart": {
+                "position": [-1.8, 137.0, 3.0],
+                "euler": [-90.0, 0.0, 24.0],
+                "scale": [0.011, 0.011, 0.011]
+            },
+            "Organ_Lungs": {
+                "position": [-3.5, 138.0, 1.6],
+                "euler": [-90.0, 0.0, 0.0],
+                "scale": [0.95, 0.87, 1.0]
+            }
+        }
+    },
+    "female": {
+        "organs": [
+            {
+                "models": ["Female/Organ/Amygdala.dae", "Female/Organ/Cerebellum.dae", "Female/Organ/Cerebrum.dae", "Female/Organ/Medulla.dae"],
+                "merge": {"strategy": "all", "newName": "Organ_Brain"},
+                "nameExpression": "^(Organ)_(.+)$"
+            },
+            {"models": ["Female/Organ/Esophagus.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Gallbladder.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Kidneys.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {
+                "models": ["Female/Organ/LargeIntestine.dae", "Female/Organ/SmallIntestineDuodenum.dae"],
+                "merge": {"strategy": "all", "newName": "Organ_Bowels"},
+                "nameExpression": "^(Organ)_(.+)$"
+            },
+            {"models": ["Female/Organ/Larynx.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Liver.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Mouth.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Pancreas.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Stomach.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Thyroid.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Female/Organ/Trachea.dae"], "nameExpression": "^(Organ)_(.+)$"}
+        ],
+        "skeletal": [
+            {
+                "models": ["Female/Skeletal.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Skeletal)_(.+)$"
+            }
+        ],
+        "muscular": [
+            {
+                "models": ["Female/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular)_(?!(Medium|Superficial|Deep)_)(.+)$"
+            }
+        ],
+        "muscular.deep": [
+            {
+                "models": ["Female/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular_Deep)_(?!Medium|Superficial)(.+)$"
+            }
+        ],
+        "muscular.medium": [
+            {
+                "models": ["Female/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular_Medium)_(?!Deep|Superficial)(.+)$"
+            }
+        ],
+        "muscular.superficial": [
+            {
+                "models": ["Female/Muscular.dae"],
+                "merge": {"strategy": "matchingExpression", "expression": "(.+)_(L|R)$", "captureGroup": 1},
+                "nameExpression": "^(Muscular_Superficial)_(?!Deep|Medium)(.+)$"
+            }
+        ],
+        "skin": [{"models": ["Female/Skin.dae"], "nameExpression": "^(Skin)$"}],
+        "nodeTransforms": {
+            "Organ_Heart": {
+                "position": [2.0, 130.0, 1.0],
+                "euler": [-90.0, 0.0, 24.0],
+                "scale": [0.010, 0.010, 0.010]
+            },
+            "Organ_Lungs": {
+                "position": [0.8, 130.0, 0.0],
+                "euler": [-90.0, 0.0, 0.0],
+                "scale": [0.88, 0.70, 0.90]
+            }
+        }
+    },
+    "common": {
+        "organs": [
+            {"models": ["Common/Organ/Heart.dae"], "nameExpression": "^(Organ)_(.+)$"},
+            {"models": ["Common/Organ/Lungs.dae"], "nameExpression": "^(Organ)_(.+)$"}
+        ],
+        "noninteractiveNodes": ["Organ_Esophagus", "Organ_Trachea", "Organ_Larynx", "Organ_Mouth", "Organ_Gallbladder"]
+    }
+}

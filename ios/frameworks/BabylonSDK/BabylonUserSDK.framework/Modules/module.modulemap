@@ -1,0 +1,4 @@
+framework module BabylonUserSDK {
+  header "BabylonUserSDK-Swift.h"
+  requires objc
+}

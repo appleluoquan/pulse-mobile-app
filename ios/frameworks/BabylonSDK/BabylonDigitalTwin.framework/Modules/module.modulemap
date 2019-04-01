@@ -1,0 +1,11 @@
+framework module BabylonDigitalTwin {
+  umbrella header "BabylonDigitalTwin.h"
+
+  export *
+  module * { export * }
+}
+
+module BabylonDigitalTwin.Swift {
+    header "BabylonDigitalTwin-Swift.h"
+    requires objc
+}

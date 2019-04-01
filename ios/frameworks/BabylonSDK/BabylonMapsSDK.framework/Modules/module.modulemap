@@ -1,0 +1,4 @@
+framework module BabylonMapsSDK {
+  header "BabylonMapsSDK-Swift.h"
+  requires objc
+}

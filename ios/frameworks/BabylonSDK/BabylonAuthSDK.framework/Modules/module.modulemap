@@ -1,0 +1,11 @@
+framework module BabylonAuthSDK {
+  umbrella header "BabylonAuthSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BabylonAuthSDK.Swift {
+    header "BabylonAuthSDK-Swift.h"
+    requires objc
+}

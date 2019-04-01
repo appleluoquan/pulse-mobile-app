@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pulse</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.32.70</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.googleusercontent.apps.1003988257868-6suul7inpbn9cj89mba7v88evd3i4b7o</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1003988257868-6suul7inpbn9cj89mba7v88evd3i4b7o</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.babylonpartners.sdks.SampleApp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.babylonpartners.sdks.SampleApp</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb323363388465348</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>323363388465348</string>
+	<key>FacebookDisplayName</key>
+	<string>Pulse By Prudential</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) camera use</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>$(PRODUCT_NAME) FaceID use</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Read and understand health data.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Share workout data with other apps.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) location use</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(PRODUCT_NAME) microphone use</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) photo use</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PruSansNormal-Demi.ttf</string>
+		<string>PruSansNormal-Demiitalic.ttf</string>
+		<string>pru-italic.ttf</string>
+		<string>PruSansNormal.ttf</string>
+		<string>pruSansItalic.ttf</string>
+		<string>StagSansRound-Black.otf</string>
+		<string>StagSansRound-BlackItalic.otf</string>
+		<string>StagSansRound-Bold.otf</string>
+		<string>StagSansRound-BoldItalic.otf</string>
+		<string>StagSansRound-Book.otf</string>
+		<string>StagSansRound-BookItalic.otf</string>
+		<string>StagSansRound-Light.otf</string>
+		<string>StagSansRound-LightItalic.otf</string>
+		<string>StagSansRound-Medium.otf</string>
+		<string>StagSansRound-MediumItalic.otf</string>
+		<string>StagSansRound-Semibold.otf</string>
+		<string>StagSansRound-SemiboldItalic.otf</string>
+		<string>Stag Sans-Black Italic.otf</string>
+		<string>Stag Sans-Black.otf</string>
+		<string>Stag Sans-Bold Italic.otf</string>
+		<string>Stag Sans-Bold.otf</string>
+		<string>Stag Sans-Book Italic.otf</string>
+		<string>Stag Sans-Book.otf</string>
+		<string>Stag Sans-Light Italic.otf</string>
+		<string>Stag Sans-Light.otf</string>
+		<string>Stag Sans-Medium Italic.otf</string>
+		<string>Stag Sans-Medium.otf</string>
+		<string>Stag Sans-Semibold Italic.otf</string>
+		<string>Stag Sans-Semibold.otf</string>
+		<string>Stag Sans-Thin Italic.otf</string>
+		<string>Stag Sans-Thin.otf</string>
+		<string>Stag Stencil-Bold Italic.otf</string>
+		<string>Stag Stencil-Bold.otf</string>
+		<string>Stag Stencil-Light Italic.otf</string>
+		<string>Stag Stencil-Light.otf</string>
+		<string>Stag-Black.otf</string>
+		<string>Stag-BlackItalic.otf</string>
+		<string>Stag-Bold.otf</string>
+		<string>Stag-BoldDot.otf</string>
+		<string>Stag-BoldItalic.otf</string>
+		<string>Stag-Book.otf</string>
+		<string>Stag-BookItalic.otf</string>
+		<string>Stag-Light.otf</string>
+		<string>Stag-LightItalic.otf</string>
+		<string>Stag-Medium.otf</string>
+		<string>Stag-MediumItalic.otf</string>
+		<string>Stag-Semibold.otf</string>
+		<string>Stag-SemiboldItalic.otf</string>
+		<string>Stag-Thin.otf</string>
+		<string>Stag-ThinDot.otf</string>
+		<string>Stag-ThinItalic.otf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>Pru Sans Normal Book Italic.ttf</string>
+		<string>Pru Sans Normal Demi Italic.ttf</string>
+		<string>Pru Sans Normal Demi.ttf</string>
+		<string>Pru Sans Normal.ttf</string>
+		<string>pru-bold.ttf</string>
+		<string>pru-bolditalic.ttf</string>
+		<string>pru-regular.ttf</string>
+		<string>pruSansBold.ttf</string>
+		<string>pruSansBolditalic.ttf</string>
+		<string>pruSansRegular.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>$(PRODUCT_NAME) requires access to the calendar</string>
+</dict>
+</plist>

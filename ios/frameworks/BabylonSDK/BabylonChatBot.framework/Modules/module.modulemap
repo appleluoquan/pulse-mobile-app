@@ -1,0 +1,11 @@
+framework module BabylonChatBot {
+  umbrella header "BabylonChatBot.h"
+
+  export *
+  module * { export * }
+}
+
+module BabylonChatBot.Swift {
+    header "BabylonChatBot-Swift.h"
+    requires objc
+}

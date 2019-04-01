@@ -1,0 +1,11 @@
+framework module BabylonCore {
+  umbrella header "BabylonCore.h"
+
+  export *
+  module * { export * }
+}
+
+module BabylonCore.Swift {
+    header "BabylonCore-Swift.h"
+    requires objc
+}

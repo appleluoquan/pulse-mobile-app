@@ -1,0 +1,4 @@
+framework module BabylonHealthRecordsSDK {
+  header "BabylonHealthRecordsSDK-Swift.h"
+  requires objc
+}

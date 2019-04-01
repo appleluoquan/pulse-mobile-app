@@ -1,0 +1,4 @@
+node_modules/*
+**/containers/ChatBot/*.js
+**/containers/HealthCheckAssessment/*.js
+**/components/**/*.js
